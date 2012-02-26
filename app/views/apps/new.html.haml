@@ -1,0 +1,22 @@
+-content_for :right do
+	%h2
+	= form_for (:Apps) do |f|
+		%div
+			= f.label 'Application Name'
+			%br/
+			= f.text_field :app_name
+		%div
+			= f.label 'OAuth Provider Client Key'
+			%br/
+			= f.text_field :ext_app_key
+		%div
+			= f.label 'OAuth Provider Secret Key'
+			%br/
+			= f.text_field :ext_app_secret
+		%div
+			= f.label 'App Image'
+			%br/
+			= f.file_field :image
+		%div= f.submit "Create App"
+	%p
+	= link_to "Back", :back

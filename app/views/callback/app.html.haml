@@ -1,0 +1,9 @@
+-content_for :main do
+	-if @missing_token
+		#missing_token
+	-if @twice
+		#twice
+	-if @thrice
+		#thrice
+	%input{:id => 'app_key', :type => 'hidden', :value => @app_key}
+		

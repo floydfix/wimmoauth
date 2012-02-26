@@ -1,0 +1,16 @@
+-if user_signed_in?
+	.apps
+		.div_title
+			.title
+				Your Apps		
+			=link_to 'Create New App', {:controller => :apps, :action => :new}, :class => 'new_app_link'
+		%br.clear
+		-if @apps
+			-@apps.each_with_index do |app, i|
+				.app{:class => (i == 0)? 'selected' : 'not-selected', 'data-app_id' => app.id}
+					.inner_app
+						.app_title
+							=app.app_name
+						.type
+							=AppTypes.get(app.app_type).description
+			%br.clear

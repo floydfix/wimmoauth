@@ -1,0 +1,16 @@
+-if user_signed_in?
+	.profile
+		.title
+			User Profile
+		.sub
+			Email 
+		.value	
+			=current_user.email
+		%br.clear
+		.sub
+			Apps
+		.value	
+			-if @apps !=nil
+				=@apps.size
+			-else 
+				0

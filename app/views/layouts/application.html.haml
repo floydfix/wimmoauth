@@ -1,0 +1,25 @@
+!!! 5
+%html
+	%head
+		=render :partial => 'layouts/header'
+	%body
+		=render :partial => 'shared/topbar'
+		#main_content
+			#left_column
+				#top
+					-if user_signed_in? && current_user
+						=render :partial => 'shared/user_profile'
+					-else
+						=yield :left_top
+					%br.clear
+				#bottom
+					-if user_signed_in? && current_user
+						=render :partial => 'shared/apps'
+					-else
+						=yield :left_bottom
+					%br.clear
+				%br.clear
+			#right_column
+				=yield :right
+				%br.clear
+	=render :partial => 'shared/footer'

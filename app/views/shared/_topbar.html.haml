@@ -1,0 +1,13 @@
+#top_bar
+	-# =link_to '',{:controller => '/home', :action => 'index'},:id => 'logo', :class => 'rounded_5'
+	-if !user_signed_in?
+		=link_to 'Login', {:controller => '/users', :action => 'sign_in'}, :id => 'login', :class => 'round_button'
+		.login_form.hide
+			=form_for(User.new, :as => :user, :url => session_path(:user), :html => { :class => 'user_new' }) do |f|
+				=f.text_field :email, :class => 't', :id => 'topbar_user_email'
+				=f.password_field :password, :class => 't', :id => 'topbar_user_password'
+				=f.submit 'sign in', :class => 'form_submit_button_white_23 left'
+				%br.clear
+		=link_to 'Register', new_user_registration_path, :id => 'register', :class => 'round_button'
+	-else
+		=link_to 'Logout',{:controller => '/users', :action => 'sign_out'}, :class => 'round_button'

@@ -1,0 +1,15 @@
+%title Wimm OAuth
+%link{ :rel => 'shortcut icon', :type => 'image/png', :href => ''}
+=stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Special+Elite'
+=stylesheet_link_tag LAYOUT_MAIN_CSS, TOPBAR_CSS 
+=yield :stylesheet
+
+/[if IE]
+	=stylesheet_link_tag 
+
+=javascript_include_tag JQUERY_JS, APPLICATION_JS, '/javascripts/json-to-table.js'
+=yield :javascript 
+
+=csrf_meta_tag
+%meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+%meta{"http-equiv" => "X-UA-Compatible", :content => "IE=9"}

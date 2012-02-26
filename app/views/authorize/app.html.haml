@@ -1,0 +1,22 @@
+-content_for :javascript do
+	=javascript_include_tag '/javascripts/oauth.js'
+
+-content_for :main do
+	.centered_back
+	-if @app && @app_type
+		-if @twice || @thrice
+			%input{:id => 'app_key', :type => 'hidden', :value => @app_key}
+			%input{:id => 'get_user_path', :type => 'hidden', :value => @app_type.get_user_path}
+			-if @twice
+				#twice
+			-elsif @thrice
+				#thrice
+			%input{:id => 'oauth_url', :type => 'hidden', :value => @oauth_url}
+		-else	
+			.title Authorization for #{@app_type.description}
+			.sub This will allow you to link your #{@app_type.description}
+			.sub account with #{@app.app_name}
+			=link_to 'Click here to begin', @oauth_url
+	-else
+		.title Something is wrong with the link you clicked, please try again, or contact the app developer. Thanks.
+			

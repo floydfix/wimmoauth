@@ -1,0 +1,15 @@
+-content_for :javascript do
+	=javascript_include_tag '/javascripts/get_user.js'
+
+-content_for :main do
+	%input{:id => 'token', :type => 'hidden', :value => @token}
+	%input{:id => 'app_id', :type => 'hidden', :value => @app.id}
+	%input{:id => 'app_key', :type => 'hidden', :value => @app.app_key}
+	%input{:id => 'type', :type => 'hidden', :value => @app.app_type}
+	%input{:id => 'get_user_path', :type => 'hidden', :value => @app_type.get_user_path}
+	%input{:id => 'token_param', :type => 'hidden', :value => @app_type.get_user_params}
+	%input{:id => 'param_end', :type => 'hidden', :value => @app_type.get_user_params_end}
+	-if @twice
+		#twice
+	-elsif @thrice
+		#thrice

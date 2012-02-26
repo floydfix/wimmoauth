@@ -1,0 +1,108 @@
+.round_button {
+  cursor: pointer;
+  display: block;
+  margin: 5px;
+  width: 82px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  background-image: url("/images/ui/round_buttons.png");
+  background-repeat: no-repeat;
+  background-position: 0 0; }
+
+.round_button:hover {
+  background-position: 0 -30px; }
+
+.round_button:active {
+  background-position: 0 -60px; }
+
+.app {
+  margin-left: 15px;
+  cursor: pointer;
+  display: block;
+  float: left;
+  width: 168px;
+  height: 60px;
+  line-height: 30px;
+  overflow: hidden;
+  background-repeat: no-repeat; }
+
+.app.not-selected {
+  background-image: url("/images/ui/rect_buttons_bigger.png");
+  background-position: 0px 0px; }
+
+.app.not-selected:hover {
+  background-position: 0px -62px; }
+
+.app.not-selected:active {
+  background-position: 0px -122px; }
+
+.app.selected {
+  background-image: url("/images/ui/rect_buttons_bigger.png");
+  background-position: 0px -122px; }
+
+.app:hover {
+  background-position: 0px -122px; }
+
+.app:active {
+  background-position: 0px -122px; }
+
+.inner_app {
+  padding: 5px;
+  text-align: center;
+  line-height: 25px; }
+
+.rect_button_left {
+  cursor: pointer;
+  display: block;
+  float: left;
+  width: 3px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  background-image: url("/images/ui/rect_buttons_left.png");
+  background-repeat: no-repeat;
+  background-position: 0 0; }
+
+.rect_button_left:hover {
+  background-position: 0 -30px; }
+
+.rect_button_left:active {
+  background-position: 0 -60px; }
+
+.rect_button_mid {
+  cursor: pointer;
+  display: block;
+  float: left;
+  min-width: 30px;
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  background-image: url("/images/ui/rect_buttons_middle.png");
+  background-repeat: no-repeat;
+  background-position: 0 0; }
+
+.rect_button_mid:hover {
+  background-position: 0 -30px; }
+
+.rect_button_mid:active {
+  background-position: 0 -60px; }
+
+.rect_button_right {
+  cursor: pointer;
+  display: block;
+  float: left;
+  width: 3px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  background-image: url("/images/ui/rect_buttons_right.png");
+  background-repeat: no-repeat;
+  background-position: 0 0; }
+
+.rect_button_right:hover {
+  background-position: 0 -30px; }
+
+.rect_button_right:active {
+  background-position: 0 -60px; }

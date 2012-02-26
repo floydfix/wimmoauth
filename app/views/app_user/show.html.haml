@@ -1,0 +1,6 @@
+-content_for :javascript do
+	=javascript_include_tag '/javascripts/jquery.countdown.min.js'
+
+-content_for :main do
+	.hidden.10minutes= @user.code_expire
+	#time_till_expire

@@ -1,0 +1,25 @@
+development:
+      host: localhost
+      adapter:  jdbcmysql
+      driver: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/WIMMOAUTH_dev
+      username: root
+      password: 
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+      host: localhost
+      adapter:  jdbcmysql
+      driver: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/WIMMOAUTH_test
+      username: root
+      password: 
+
+production:
+      host: rogerlemmon.com
+      adapter:  jdbcmysql
+      driver: com.mysql.jdbc.Driver
+      url: jdbc:mysql://rogerlemmon.com:3306/rogerlem_wimmoauth_PROD
+      username: rogerlem_rails
+      password: ra1ls

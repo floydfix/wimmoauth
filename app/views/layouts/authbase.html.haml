@@ -1,0 +1,9 @@
+!!! 5
+%html
+	%head
+		=render :partial => 'layouts/header'
+	%body
+		#main_content
+			=yield :main
+			%br.clear
+	=render :partial => 'shared/footer'
